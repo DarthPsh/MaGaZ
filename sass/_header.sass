@@ -1,0 +1,105 @@
+.header
+	&-top
+		padding: 15px 0
+		background: $textColor
+		top: 0
+		width: 100%
+		z-index: 99
+		&__wrap
+			display: flex
+			justify-content: space-between
+			align-items: center
+		&__phone
+			display: flex
+			align-items: center
+			color: $whiteColor
+			img
+				height: 25px
+				margin-right: 10px
+			b
+				margin-left: 10px
+				font-size: 20px
+				font-weight: bold
+		&__cta
+			color: $whiteColor
+			cursor: pointer
+			position: relative
+			&:after
+				content: ""
+				position: absolute
+				display: block
+				width: 0
+				height: 3px
+				background: $whiteColor
+				left: 50%
+				transform: translate(-50%)
+				bottom: -3px
+				transition: .3s
+			&:hover:after
+				width: 100%
+	&-main
+		display: flex
+		justify-content: space-between
+		align-items: center
+		&__logo
+			font-size: 30px
+			font-weight: 900
+			a
+				color: $mainColor
+			span
+				display: block
+				font-size: 16px
+				color: $secondColor
+				font-weight: normal
+		&__nav
+			&-link
+				margin-left: 25px
+				text-transform: uppercase
+				color: $textColor
+				transition: .3s
+				&:hover
+					color: $secondColor
+					transition: .3s
+
+@media screen and (max-width: 1040px)
+	.header
+		&-top
+			&__wrap
+				padding: 0 10px
+		&-main
+			justify-content: center
+			&__logo
+
+
+@media screen and (max-width: 992px)
+	.header
+		&-top
+			&__wrap
+			&__phone
+				span
+					display: none
+				img
+					margin: 0
+		&-main
+			&__nav
+				display: none
+			&__logo
+
+
+
+
+@media screen and (max-width: 576px)
+	.header
+		&-top
+			&__wrap
+			&__phone
+				img
+					display: none
+				b
+					margin: 0
+					font-size: 16px
+		&-main
+			&__logo
+				font-size: 25px
+
+

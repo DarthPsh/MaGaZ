@@ -1,0 +1,254 @@
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+
+.burger
+  display: none
+  @media screen and (max-width: 992px)
+    display: block
+
+.drawer-list
+  position: fixed
+  right: 0
+  top: 0
+  height: 100vh
+  width: 100vw
+  transform: translate(100vw, 0)
+  -ms-transform: translatex(-100vw)
+  box-sizing: border-box
+  pointer-events: none
+  padding-top: 125px
+  transition: width 475ms ease-out, transform 450ms ease, border-radius .8s .1s ease
+  border-bottom-left-radius: 100vw
+  background-color: rgba($secondColor, .8) //цвет шторки
+  z-index: 20
+  ul
+    height: 100%
+    width: 100%
+    margin: 0
+    padding: 0
+    overflow: auto
+    overflow-x: hidden
+    pointer-events: auto
+  li
+    list-style: none
+    pointer-events: auto
+    white-space: nowrap
+    box-sizing: border-box
+    transform: translatex(100vw)
+    -ms-transform: translatex(-100vw)
+    &:last-child
+      margin-bottom: 2em
+    a
+      text-decoration: none
+      color: $textColor //цвет ссылок
+      text-align: center
+      display: block
+      padding: 1rem
+      font-size: calc(24px - .5vw)
+      &:hover
+        cursor: pointer
+        background-color: $secondColor //цвет при наведении на ссылки
+
+@media (min-width: 768px)
+  .drawer-list
+    width: 40vw
+
+@media (min-width: 768px)
+  .drawer-list li a
+    text-align: right
+    padding: .5rem
+
+input.hamburger
+  display: none
+  &:checked ~
+    .drawer-list
+      transform: translatex(0)
+      border-bottom-left-radius: 0
+      li
+        transform: translatex(0)
+        &:nth-child(1)
+          transition: transform 1s 0.08s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(2)
+          transition: transform 1s 0.16s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(3)
+          transition: transform 1s 0.24s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(4)
+          transition: transform 1s 0.32s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(5)
+          transition: transform 1s 0.4s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(6)
+          transition: transform 1s 0.48s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(7)
+          transition: transform 1s 0.56s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(8)
+          transition: transform 1s 0.64s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(9)
+          transition: transform 1s 0.72s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(10)
+          transition: transform 1s 0.8s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(11)
+          transition: transform 1s 0.88s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(12)
+          transition: transform 1s 0.96s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(13)
+          transition: transform 1s 1.04s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(14)
+          transition: transform 1s 1.12s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(15)
+          transition: transform 1s 1.2s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(16)
+          transition: transform 1s 1.28s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(17)
+          transition: transform 1s 1.36s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(18)
+          transition: transform 1s 1.44s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(19)
+          transition: transform 1s 1.52s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(20)
+          transition: transform 1s 1.6s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(21)
+          transition: transform 1s 1.68s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(22)
+          transition: transform 1s 1.76s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(23)
+          transition: transform 1s 1.84s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(24)
+          transition: transform 1s 1.92s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(25)
+          transition: transform 1s 2s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(26)
+          transition: transform 1s 2.08s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(27)
+          transition: transform 1s 2.16s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(28)
+          transition: transform 1s 2.24s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(29)
+          transition: transform 1s 2.32s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(30)
+          transition: transform 1s 2.4s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(31)
+          transition: transform 1s 2.48s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(32)
+          transition: transform 1s 2.56s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(33)
+          transition: transform 1s 2.64s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(34)
+          transition: transform 1s 2.72s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(35)
+          transition: transform 1s 2.8s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(36)
+          transition: transform 1s 2.88s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(37)
+          transition: transform 1s 2.96s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(38)
+          transition: transform 1s 3.04s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(39)
+          transition: transform 1s 3.12s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(40)
+          transition: transform 1s 3.2s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(41)
+          transition: transform 1s 3.28s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(42)
+          transition: transform 1s 3.36s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(43)
+          transition: transform 1s 3.44s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(44)
+          transition: transform 1s 3.52s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(45)
+          transition: transform 1s 3.6s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(46)
+          transition: transform 1s 3.68s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(47)
+          transition: transform 1s 3.76s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(48)
+          transition: transform 1s 3.84s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(49)
+          transition: transform 1s 3.92s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        &:nth-child(50)
+          transition: transform 1s 4s cubic-bezier(0.29, 1.4, 0.44, 0.96)
+        a
+          padding-right: 15px
+    label
+      > i
+        background-color: transparent
+        transform: rotate(90deg)
+        &:before
+          transform: translate(-50%, -50%) rotate(315deg)
+        &:after
+          transform: translate(-50%, -50%) rotate(-315deg)
+      close
+        color: #fff
+        width: 100%
+      open
+        color: transparent
+        width: 0
+
+label.hamburger
+  z-index: 25
+  position: relative
+  display: block
+  height: 50px
+  width: 50px
+  &:hover
+    cursor: pointer
+  text
+    close, open
+      text-transform: uppercase
+      font-size: .8em
+      align-text: center
+      position: absolute
+      transform: translateY(50px)
+      text-align: center
+      overflow: hidden
+      transition: width .25s .35s, color .45s .35s
+    close
+      color: transparent
+      right: 0
+      width: 0
+    open
+      color: #fff
+      width: 100%
+  > i
+    position: absolute
+    width: 100%
+    height: 2px
+    top: 50%
+    background-color: #fff
+    pointer-events: auto
+    transition-duration: .35s
+    transition-delay: .35s
+    &:before, &:after
+      position: absolute
+      display: block
+      width: 100%
+      height: 2px
+      left: 50%
+      background-color: #fff
+      content: ""
+      transition: transform 0.35s
+      transform-origin: 50% 50%
+    &:before
+      transform: translate(-50%, -10px)
+    &:after
+      transform: translate(-50%, 10px)
+  position: fixed
+  top: 0px
+  right: 20px
+
+@media screen and (max-width: 768px)
+  label.hamburger
+    position: relative
+    display: block
+    height: 30px
+    width: 30px
+    right: 0
+
+@media screen and (max-width: 576px)
+  label.hamburger
+    position: relative
+    display: block
+    height: 15px
+    width: 15px
+    right: 0

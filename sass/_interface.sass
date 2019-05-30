@@ -1,0 +1,67 @@
+$mainColor: #A20417
+$secondColor: #ED4255
+$textColor: #007144
+$whiteColor: #ffffff
+$blackColor: #000000
+
+*
+	outline: none
+
+body
+	font-family: sans-serif
+
+a
+	text-decoration: none
+
+
+.container
+	width: 1040px	
+	margin: 0 auto
+	max-width: 100%
+
+.btn
+	background: $secondColor
+	color: $whiteColor
+	text-transform: uppercase
+	transition: .5s
+	border-radius: 10px
+	border: transparent
+	padding: 15px 35px
+	&:hover
+		background: $mainColor
+		transition: .5s
+
+.section
+	padding: 50px 0
+	position: relative
+	z-index: 0
+	&-title
+		color: $mainColor
+		text-align: center
+	&-desc
+		color: $textColor
+		font-size: 18px
+	&-bg
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: rgba(#cccccc, .8)
+			z-index: -10
+
+
+@media screen and (max-width: 1040px)
+	.section
+		&-title
+			padding: 0 20px
+		&-desc
+			padding: 0 20px
+
+@media screen and (max-width: 768px)
+	.section
+		&-title
+		&-desc
+			font-size: 16px

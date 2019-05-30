@@ -1,0 +1,47 @@
+.main
+	background: url(../img/main-bg.jpg) center no-repeat
+	background-size: cover
+	&-wrap
+		display: flex
+		align-items: center
+	&-content
+		&__title
+			color: $secondColor
+			span
+				color: $mainColor
+	&-form
+		padding: 50px 50px
+		min-width: 300px
+		&__title
+			color: $textColor
+		.form
+			display: flex
+			flex-direction: column
+			text-align: center
+			label
+				color: $textColor
+				margin-bottom: 5px
+			input
+				border-radius: 10px
+				border: transparent
+				padding: 15px
+				margin-bottom: 30px
+
+@media screen and (max-width: 768px)
+	.main
+		&-wrap
+			flex-direction: column
+		&-content
+			&__title
+
+
+@media screen and (max-width: 576px)
+	.main
+		&-wrap
+			flex-direction: column
+		&-content
+			&__title
+				font-size: 24px
+
+
+			
