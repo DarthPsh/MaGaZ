@@ -114,27 +114,27 @@ closePopup.addEventListener("click", function() {
 
 
 
-// let h = document.querySelector(".header-top"),
-// 	stuck = false,
-// 	stickPoint = getDistance();
+let h = document.querySelector(".header-top"),
+	stuck = false,
+	stickPoint = getDistance();
 
-// function getDistance() {
-// 	let topDist = h.offsetTop;
-// 	return topDist;
-// };
+function getDistance() {
+	let topDist = h.offsetTop;
+	return topDist;
+};
 
-// window.onscroll = function(e) {
-// 	let distance = getDistance() - window.pageYOffset;
-// 	let offset = window.pageYOffset;
-// 	if ( (distance <= 0) && !stuck) {
-// 	    h.style.position = "fixed";
-// 	    h.style.top = "0px";
-// 	    stuck = true;
-// 	} else if (stuck && (offset <= stickPoint)){
-// 	    h.style.position = "static";
-// 	    stuck = false;
-// 	}
-// };
+window.onscroll = function(e) {
+	let distance = getDistance() - window.pageYOffset;
+	let offset = window.pageYOffset;
+	if ( (distance <= 0) && !stuck) {
+	    h.style.position = "fixed";
+	    h.style.top = "0px";
+	    stuck = true;
+	} else if (stuck && (offset <= stickPoint)){
+	    h.style.position = "static";
+	    stuck = false;
+	}
+};
 
 
 
