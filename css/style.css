@@ -541,7 +541,7 @@ a {
   margin-right: 50px;
 }
 
-.payment-block__img:last-child {
+.payment-block__img_right {
   margin-right: 0;
   margin-left: 50px;
 }
@@ -557,7 +557,7 @@ a {
     margin-right: 10px;
   }
 
-  .payment-block__img:last-child {
+  .payment-block__img_right {
     margin-right: 0;
     margin-left: 10px;
   }
@@ -580,7 +580,7 @@ a {
 
 .contacts__block {
   position: absolute;
-  top: 150px;
+  top: 100px;
   left: 150px;
   width: 400px;
   font-size: 20px;
