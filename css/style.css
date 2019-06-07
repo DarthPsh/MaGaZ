@@ -624,18 +624,19 @@ a {
 
   .contacts__block {
     position: static;
-    min-width: 100%;
-    padding: 0;
-    margin: 20px 0;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .contacts__block {
-    position: static;
     max-width: 100%;
-    padding: 0;
     margin: 20px 0;
+    font-size: 16px;
+  }
+
+  .contacts__block-address,
+  .contacts__block-time,
+  .contacts__block-phone {
+    margin: 0 20px;
+  }
+
+  .contacts__block .btn {
+    margin: 20px;
   }
 }
 

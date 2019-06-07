@@ -138,5 +138,18 @@ window.onscroll = function(e) {
 
 
 
+function closeMenu() {
+	let link = document.querySelectorAll(".drawer-list__link"),
+		menu = document.getElementById("hamburger");
+
+	for (let i = 0; i < link.length; i++) {
+		link[i].addEventListener("click", function() {
+			menu.checked = false;
+		});
+	};
+};
+closeMenu();
+
+
 
 
